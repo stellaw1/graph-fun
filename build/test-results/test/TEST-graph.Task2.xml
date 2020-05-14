@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="graph.Task2" tests="17" skipped="0" failures="0" errors="0" timestamp="2020-05-14T01:01:48" hostname="DESKTOP-SG8E25E" time="0.712">
+  <properties/>
+  <testcase name="shortestPath(Graph, Vertex, Vertex, int)[1]" classname="graph.Task2" time="0.086"/>
+  <testcase name="shortestPath(Graph, Vertex, Vertex, int)[2]" classname="graph.Task2" time="0.004"/>
+  <testcase name="shortestPath(Graph, Vertex, Vertex, int)[3]" classname="graph.Task2" time="0.004"/>
+  <testcase name="remove()" classname="graph.Task2" time="0.001"/>
+  <testcase name="edgeLengthSum(Graph, int)[1]" classname="graph.Task2" time="0.002"/>
+  <testcase name="edgeLengthSum(Graph, int)[2]" classname="graph.Task2" time="0.002"/>
+  <testcase name="edgeLengthSum(Graph, int)[3]" classname="graph.Task2" time="0.001"/>
+  <testcase name="edgeLengthSum(Graph, int)[4]" classname="graph.Task2" time="0.005"/>
+  <testcase name="diameter(Graph, int)[1]" classname="graph.Task2" time="0.005"/>
+  <testcase name="diameter(Graph, int)[2]" classname="graph.Task2" time="0.003"/>
+  <testcase name="diameter(Graph, int)[3]" classname="graph.Task2" time="0.359"/>
+  <testcase name="edge(Graph, Vertex, Vertex, Edge)[1]" classname="graph.Task2" time="0.001"/>
+  <testcase name="pathLength(Graph, List, int)[1]" classname="graph.Task2" time="0.004"/>
+  <testcase name="pathLength(Graph, List, int)[2]" classname="graph.Task2" time="0.005"/>
+  <testcase name="pathLength(Graph, List, int)[3]" classname="graph.Task2" time="0.001"/>
+  <testcase name="minimumSpanningTree(Graph, Set)[1]" classname="graph.Task2" time="0.02"/>
+  <testcase name="minimumSpanningTree(Graph, Set)[2]" classname="graph.Task2" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

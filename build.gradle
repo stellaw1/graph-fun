@@ -1,0 +1,97 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'checkstyle'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+ext {
+    junitJupiterVersion = "5.5.2"
+    junit4Version = "4.1.2"
+}
+
+group 'CPEN 221'
+version '1.1-SNAPSHOT'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+javafx {
+    version = "13"
+    modules = [ 'javafx.base' ]
+}
+
+dependencies {
+    compile group: 'org.openjfx', name: 'javafx-base', version: '11'
+
+    compile "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+
+    testCompile (
+            // Uncomment to use junit4
+            "junit:junit:${junit4Version}",
+            "org.junit.jupiter:junit-jupiter-migrationsupport:${junitJupiterVersion}",
+
+            "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
+    )
+
+    testRuntime (
+            // Uncomment to use junit4
+            "org.junit.vintage:junit-vintage-engine:${junitJupiterVersion}",
+
+            "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task cleanTests(type: Delete) {
+    delete 'src/test/java'
+}
+
+task cleanStatus(type: Delete) {
+    delete '__TIMEOUT__'
+    delete '__COMPILES__'
+    delete '__COVERAGE__'
+    delete '__TESTS__'
+}
+
+tasks.withType(Checkstyle) {
+    source 'src/main'
+    include '**/Graph.java'
+    include '**/MillenniumFalcon.java'
+    classpath = files()
+
+    reports {
+        xml.enabled     true
+        html.enabled    true
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.2"
+    reportsDir = file("$buildDir/reports/jacoco")
+}
+
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+    jacoco.excludes = ['jdk.internal.*']
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled true
+        html.enabled false
+    }
+}

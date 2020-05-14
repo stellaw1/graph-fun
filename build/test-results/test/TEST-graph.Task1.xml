@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="graph.Task1" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-05-14T01:01:48" hostname="DESKTOP-SG8E25E" time="0.213">
+  <properties/>
+  <testcase name="testEdge()" classname="graph.Task1" time="0.145"/>
+  <testcase name="testRemoveVertex1()" classname="graph.Task1" time="0.004"/>
+  <testcase name="testRemoveVertex2()" classname="graph.Task1" time="0.004"/>
+  <testcase name="testRemoveVertex3()" classname="graph.Task1" time="0.004"/>
+  <testcase name="testAddEdge1()" classname="graph.Task1" time="0.004"/>
+  <testcase name="testEdgeLength1()" classname="graph.Task1" time="0.003"/>
+  <testcase name="testEdgeLength2()" classname="graph.Task1" time="0.002"/>
+  <testcase name="testAddVertex()" classname="graph.Task1" time="0.004"/>
+  <testcase name="testEdgeLengthSum()" classname="graph.Task1" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
